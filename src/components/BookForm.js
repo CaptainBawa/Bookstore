@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
 
-// const generateId = () => `item${Math.random().toString(36).substr(2, 9)}`;
-
 const generateId = () => {
   const uniqueId = Date.now().toString(36);
   return `item${uniqueId}`;

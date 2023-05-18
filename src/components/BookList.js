@@ -4,7 +4,7 @@ import { fetchBooks, removeBook } from '../redux/books/booksSlice';
 
 const BooksList = () => {
   const dispatch = useDispatch();
-  const booksObject = useSelector((state) => state.books.books);
+  const books = useSelector((state) => state.books);
   const status = useSelector((state) => state.books.status);
   const error = useSelector((state) => state.books.error);
 
@@ -25,19 +25,20 @@ const BooksList = () => {
     );
   }
 
-  const books = Object.values(booksObject).flat().map((book) => ({
+  const booksList = books.books.map((book, index) => ({
     ...book,
     item_id: book.item_id,
+    key: `${book.item_id}-${index}`,
   }));
 
-  console.log('Array books', books);
+  console.log('BooksList', booksList);
 
   return (
     <div>
       <h2>Books</h2>
       <ul>
-        {books.map((book) => (
-          <li key={book.item_id}>
+        {booksList.map((book) => (
+          <li key={book.key}>
             <div>{book.title}</div>
             <div>{book.author}</div>
             <div>{book.category}</div>

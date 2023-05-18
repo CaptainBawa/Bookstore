@@ -10,7 +10,6 @@ const initialState = {
 export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   try {
     const response = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/wNk7XH3cKH6OpVXSi7sW/books');
-    console.log(response.data);
     return response.data;
   } catch (error) {
     throw Error('Failed to fetch books');
@@ -29,7 +28,6 @@ export const addBook = createAsyncThunk('books/addBook', async (bookData) => {
 export const removeBook = createAsyncThunk('books/removeBook', async (bookId) => {
   try {
     await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/wNk7XH3cKH6OpVXSi7sW/books/${bookId}`);
-    console.log('Id', bookId);
     return bookId;
   } catch (error) {
     throw Error('Failed to remove book');
@@ -44,12 +42,12 @@ const booksSlice = createSlice({
     builder
       .addCase(fetchBooks.pending, (state) => {
         state.status = 'loading';
-      })
-      .addCase(fetchBooks.fulfilled, (state, action) => {
-        console.log('action', action.payload);
-        state.status = 'succeeded';
-        state.books = Object.values(action.payload);
-      })
+      });
+    builder.addCase(fetchBooks.fulfilled, (state, { payload }) => {
+      state.status = 'succeeded';
+      state.books = Object.entries(payload)
+        .flatMap(([key, value]) => value.map((book) => ({ ...book, item_id: key, progress: 80 })));
+    })
       .addCase(fetchBooks.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
