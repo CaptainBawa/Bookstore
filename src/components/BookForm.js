@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { addBook, addBookApi } from '../redux/books/booksSlice';
+
+const generateId = () => {
+  const uniqueId = Date.now().toString(36);
+  return `item${uniqueId}`;
+};
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -22,21 +27,21 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addBook({ title, author, category }));
+    const formInput = {
+      item_id: generateId(),
+      title,
+      author,
+      category,
+    };
+    dispatch(addBook(formInput));
+    dispatch(addBookApi(formInput));
+
     setTitle('');
     setAuthor('');
     setCategory('');
   };
 
-  const categories = [
-    { value: '', label: 'Category', disabled: true },
-    { value: 'Action', label: 'Action' },
-    { value: 'History', label: 'History' },
-    { value: 'Horror', label: 'Horror' },
-    { value: 'Kids', label: 'Kids' },
-    { value: 'Learning', label: 'Learning' },
-    { value: 'Sci-Fi', label: 'Sci-Fi' },
-  ];
+  const categories = [{ value: '', label: 'Category', disabled: true }, { value: 'Action', label: 'Action' }, { value: 'History', label: 'History' }, { value: 'Horror', label: 'Horror' }, { value: 'Kids', label: 'Kids' }, { value: 'Learning', label: 'Learning' }, { value: 'Sci-Fi', label: 'Sci-Fi' }];
 
   return (
     <form onSubmit={handleSubmit}>
@@ -54,11 +59,7 @@ const BookForm = () => {
         value={author}
         onChange={handleAuthor}
       />
-      <select
-        name="category"
-        value={category}
-        onChange={handleCategory}
-      >
+      <select name="category" value={category} onChange={handleCategory}>
         {categories.map((category) => (
           <option
             key={category.value}
