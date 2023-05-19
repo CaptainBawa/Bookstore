@@ -29,9 +29,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [Math Magicians] <a name="about-project"></a>
+# 📖 [Bookstore] <a name="about-project"></a>
 
-**[Math_Magicians]**  is a dynamic web application that allows users to add, delete, and edit books in a virtual bookstore. Built using the React framework, the application provides a user-friendly interface for managing book inventory. 
+**[Bookstore]** is a powerful application that allows users to seamlessly manage their book collection. By leveraging an external API, the project enables users to fetch and post books effortlessly. Users can add new books to their library, edit book details, and remove unwanted books, all while seamlessly synchronizing the data with the external API. Additionally, the project provides a visual representation of the user's reading progress, allowing them to track their advancement through each book. With its intuitive interface and API integration, the React Bookstore project offers a streamlined and efficient book management experience. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -55,13 +55,15 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Add_Book]**
-- **[Delete_Book]**
+- **[Remove_Book]**
+- **[Edit_Book]**
+- **[View_Progress]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](Coming soon)
+- [Live Demo Link](https://bootstore-0ouz.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,8 +127,6 @@ This project is deployed at github pages you can clone it here.
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Add_Styles]**
-- [ ] **[Add_reducers]**
-- [ ] **[Connect_API]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
