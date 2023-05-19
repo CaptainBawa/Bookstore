@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { addBook, addBookApi } from '../redux/books/booksSlice';
 
 const generateId = () => {
   const uniqueId = Date.now().toString(36);
@@ -34,6 +34,7 @@ const BookForm = () => {
       category,
     };
     dispatch(addBook(formInput));
+    dispatch(addBookApi(formInput));
 
     setTitle('');
     setAuthor('');

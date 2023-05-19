@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchBooks, removeBook } from '../redux/books/booksSlice';
+import { fetchBooks, removeBook, removeBookApi } from '../redux/books/booksSlice';
 
 const BooksList = () => {
   const dispatch = useDispatch();
@@ -31,8 +31,6 @@ const BooksList = () => {
     key: `${book.item_id}-${index}`,
   }));
 
-  console.log('BooksList', booksList);
-
   return (
     <div>
       <h2>Books</h2>
@@ -42,7 +40,13 @@ const BooksList = () => {
             <div>{book.title}</div>
             <div>{book.author}</div>
             <div>{book.category}</div>
-            <button type="button" onClick={() => dispatch(removeBook(book.item_id))}>
+            <button
+              type="button"
+              onClick={() => {
+                dispatch(removeBook(book.item_id));
+                dispatch(removeBookApi(book.item_id));
+              }}
+            >
               Remove
             </button>
           </li>
