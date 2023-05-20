@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
 import { useDispatch } from 'react-redux';
 import { addBook, addBookApi } from '../redux/books/booksSlice';
 
@@ -44,34 +46,39 @@ const BookForm = () => {
   const categories = [{ value: '', label: 'Category', disabled: true }, { value: 'Action', label: 'Action' }, { value: 'History', label: 'History' }, { value: 'Horror', label: 'Horror' }, { value: 'Kids', label: 'Kids' }, { value: 'Learning', label: 'Learning' }, { value: 'Sci-Fi', label: 'Sci-Fi' }];
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Book Title"
-        required
-        value={title}
-        onChange={handleTitle}
-      />
-      <input
-        type="text"
-        placeholder="Book Author"
-        required
-        value={author}
-        onChange={handleAuthor}
-      />
-      <select name="category" value={category} onChange={handleCategory}>
-        {categories.map((category) => (
-          <option
-            key={category.value}
-            value={category.value}
-            disabled={category.disabled}
-          >
-            {category.label}
-          </option>
-        ))}
-      </select>
-      <button type="submit">ADD BOOK</button>
-    </form>
+    <>
+      <Divider style={{ height: '0.125rem', marginLeft: '2.8%' }} />
+      <h1 className="form-h1">ADD NEW BOOK</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Book Title"
+          required
+          value={title}
+          onChange={handleTitle}
+        />
+        <input
+          type="text"
+          placeholder="Book Author"
+          required
+          value={author}
+          onChange={handleAuthor}
+        />
+        <select name="category" value={category} onChange={handleCategory}>
+          {categories.map((category) => (
+            <option
+              key={category.value}
+              value={category.value}
+              disabled={category.disabled}
+            >
+              {category.label}
+            </option>
+          ))}
+        </select>
+        <br />
+        <Button type="submit" variant="contained">ADD BOOK</Button>
+      </form>
+    </>
   );
 };
 
