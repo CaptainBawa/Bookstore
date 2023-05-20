@@ -47,7 +47,7 @@ const BookForm = () => {
 
   return (
     <>
-      <Divider />
+      <Divider style={{ height: '0.125rem', marginLeft: '2.8%' }} />
       <h1 className="form-h1">ADD NEW BOOK</h1>
       <form onSubmit={handleSubmit}>
         <input

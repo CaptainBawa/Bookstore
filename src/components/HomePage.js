@@ -4,7 +4,7 @@ import BooksList from './BookList';
 
 const HomePage = () => (
   <>
-    <Divider />
+    <Divider style={{ height: '0' }} />
     <div className="main">
       <BooksList />
       <BookForm />

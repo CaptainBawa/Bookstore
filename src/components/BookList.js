@@ -10,6 +10,18 @@ const BooksList = () => {
   const status = useSelector((state) => state.books.status);
   const error = useSelector((state) => state.books.error);
 
+  const buttonStyle = {
+    fontFamily: 'RobotoSlab',
+    fontSize: '0.875rem',
+    fontWeight: '300',
+    fontStretch: 'normal',
+    fontStyle: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: 'normal',
+    color: '#4386bf',
+    paddingLeft: '0',
+  };
+
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);
@@ -42,9 +54,10 @@ const BooksList = () => {
               <div className="category">{book.category}</div>
               <div className="title">{book.title}</div>
               <div className="book">{book.author}</div>
-              <Button variant="text">Comments</Button>
+              <Button variant="text" style={buttonStyle}>Comments</Button>
               <Button
                 variant="text"
+                style={buttonStyle}
                 type="button"
                 onClick={() => {
                   dispatch(removeBook(book.item_id));
@@ -53,14 +66,14 @@ const BooksList = () => {
               >
                 Remove
               </Button>
-              <Button variant="text">Edit</Button>
+              <Button variant="text" style={buttonStyle}>Edit</Button>
             </li>
             <div className="lesson-side">
               <li className="progress">
-                <CircularProgress style={{ color: 'blue' }} />
+                <CircularProgress variant="determinate" value={75} style={{ color: '#379cf6', width: '4.25rem', height: '4.25rem' }} />
                 <div>
                   <h1>
-                    80%
+                    75%
                     <br />
                     <span>Completed</span>
                   </h1>
