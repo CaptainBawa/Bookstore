@@ -55,9 +55,7 @@ code {
   display: flex;
 }
 
-.panel-nav h1 {
-  padding-left: 5%;
-  width: 15rem;
+.header {
   height: 2.313rem;
   font-size: 1.875rem;
   font-weight: bold;
@@ -65,7 +63,7 @@ code {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--azure);
+  color: #0290ff;
   font-family: Montserrat, sans-serif;
 }
 
@@ -74,6 +72,21 @@ code {
   display: flex;
   align-items: center;
   gap: 5em;
+  padding-left: 8%;
+}
+
+.nav-link {
+  width: 6.563rem;
+  height: 1rem;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
 }
 
 .head {
@@ -212,15 +225,14 @@ hr {
 
 form {
   background-color: #f3f3f3;
-  width: 97%;
+  width: 96%;
   height: auto;
   display: flex;
   justify-content: space-between;
-  padding-left: 3%;
+  padding-left: 3.5%;
 }
 
 .form-h1 {
-  width: 10.875rem;
   height: 1.5rem;
   font-family: Montserrat, sans-serif;
   font-size: 1.25rem;
@@ -230,7 +242,7 @@ form {
   line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
-  padding-left: 3%;
+  padding-left: 3.5%;
 }
 
 input,

@@ -6,13 +6,13 @@ const Navigation = () => (
   <nav className="panel-nav">
     <ul className="nav-ul">
       <h1>
-        <Link to="/">BookStore CMS</Link>
+        <Link to="/" className="header">BookStore CMS</Link>
       </h1>
       <li>
-        <Link to="/">BOOKS</Link>
+        <Link to="/" className="nav-link">BOOKS</Link>
       </li>
       <li>
-        <Link to="/categories">CATEGORIES</Link>
+        <Link to="/categories" className="nav-link">CATEGORIES</Link>
       </li>
       <li className="head">
         <AccountCircleIcon style={{ fontSize: '3em', color: 'blue' }} />
