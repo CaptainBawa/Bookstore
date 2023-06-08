@@ -82,10 +82,10 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- [] git version 2.38.x
-- [] node.js version > 12.x
-- [] IDE
-- [] browser (chrome, firefox, edge, safari)
+- [ ] git version 2.38.x
+- [ ] node.js version > 12.x
+- [ ] IDE
+- [ ] browser (chrome, firefox, edge, safari)
 
 ### Setup
 
