@@ -5,7 +5,7 @@
   <img src="LinkedIn Cover Main.jpg" alt="logo" width="100%"  height="auto" />
   <br/>
 
-  <h3><b>Math Magicians App</b></h3>
+  <h3><b>Bookstore App</b></h3>
 
 </div>
 
@@ -29,9 +29,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [Bookstore] <a name="about-project"></a>
+# 📖 Bookstore<a name="about-project"></a>
 
-**[Bookstore]** is a powerful application that allows users to seamlessly manage their book collection. By leveraging an external API, the project enables users to fetch and post books effortlessly. Users can add new books to their library, edit book details, and remove unwanted books, all while seamlessly synchronizing the data with the external API. Additionally, the project provides a visual representation of the user's reading progress, allowing them to track their advancement through each book. With its intuitive interface and API integration, the React Bookstore project offers a streamlined and efficient book management experience. 
+**Bookstore** is a powerful application that allows users to seamlessly manage their book collection. By leveraging an external API, the project enables users to fetch and post books effortlessly. Users can add new books to their library, edit book details, and remove unwanted books, all while seamlessly synchronizing the data with the external API. Additionally, the project provides a visual representation of the user's reading progress, allowing them to track their advancement through each book. With its intuitive interface and API integration, the React Bookstore project offers a streamlined and efficient book management experience. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -48,16 +48,23 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
+    <li><a href="https://dashboard.render.com/">Render</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Database</summary>
+  <ul>
+    <li><a href="https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/wNk7XH3cKH6OpVXSi7sW/books">Bookstore API</a></li>
   </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add_Book]**
-- **[Remove_Book]**
-- **[Edit_Book]**
-- **[View_Progress]**
+- **Add Book**
+- **Remove Book**
+- **Edit Book**
+- **View Progress**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,7 +101,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd my-project
+  cd Bookstore
   npm install/npm i
 ```
 
@@ -110,7 +117,7 @@ To run the project, execute the following command:
 
 You can deploy this project using:
 
-This project is deployed at github pages you can clone it here.
+This project is deployed at Render.com, you can clone it here.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,13 +127,13 @@ This project is deployed at github pages you can clone it here.
 
 - GitHub: [@CaptainBawa](https://github.com/CaptainBawa)
 - Twitter: [@BawaCollins](https://twitter.com/BawaCollins)
-- LinkedIn: [captainbawa](https://www.linkedin.com/in/captainbawa/)
+- LinkedIn: [@captainbawa](https://www.linkedin.com/in/captainbawa/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add_Styles]**
+- [ ] **Add Styles**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
